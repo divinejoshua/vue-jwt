@@ -5,7 +5,7 @@
       <div class="logout">Logout</div>
     </div>
     <div class="body">
-      <div class="username">@divine</div>
+      <div class="username">divine</div>
       <div class="email">divine@gmail.com</div>
     </div>
   </div>
