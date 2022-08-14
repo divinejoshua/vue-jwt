@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="header">
-      <div class="brand">Vue JWT</div>
+      <div class="brand"><span class="vue">Vue</span> JWT</div>
       <div class="logout">Logout</div>
     </div>
     <div class="body">
