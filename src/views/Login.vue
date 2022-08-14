@@ -31,7 +31,7 @@
 
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 
 
   export default {
@@ -49,7 +49,7 @@ data: () => ({
     methods: {
       submitForm () {
         this.form.username =  this.form.username.toLowerCase()
-        console.log(this.form.user)
+        console.log(this.form)
       },
     }
   }
