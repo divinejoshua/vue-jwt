@@ -9,12 +9,12 @@
 
         <!-- Email  -->
         <div>
-          <input type="email" class="form-control" placeholder="Email" required>
+          <input type="email" class="form-control" placeholder="Email">
         </div>
 
         <!-- Password  -->
         <div><br>
-          <input type="password" class="form-control" placeholder="Password" required>
+          <input type="password" class="form-control" placeholder="Password">
         </div>
 
         <!-- Submit button  -->
@@ -41,6 +41,7 @@ data: () => ({
         username: ''.toLowerCase(),
         password: '',
        },
+    }),
     
     methods: {
       submitForm () {
