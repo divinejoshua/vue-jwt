@@ -10,10 +10,19 @@
     margin-right: auto;
 }
 
+.header{
+    padding-top:30px;
+    padding-bottom:70px;
+    border-bottom: 1px solid #efefef;
+}
+
 .brand{
     float: left;
+    font-size: 30px;
 }
 
 .logout{
+    margin-top: 10px;
     float: right;
+    cursor: pointer;
 }
