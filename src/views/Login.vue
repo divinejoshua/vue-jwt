@@ -46,7 +46,7 @@ data: () => ({
     methods: {
       submitForm () {
         this.form.username =  this.form.username.toLowerCase()
-        console.log(this.form)
+        console.log(this.form.user)
       },
     }
   }
