@@ -5,6 +5,8 @@
 
       <div>
 
+        <div class="message">This is for any message</div><br>
+
         <!-- Email  -->
         <div>
           <input type="email" class="form-control" placeholder="Email">
