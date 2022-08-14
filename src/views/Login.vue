@@ -9,12 +9,12 @@
 
         <!-- Email  -->
         <div>
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" class="form-control" placeholder="Email" required>
         </div>
 
         <!-- Password  -->
         <div><br>
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" required>
         </div>
 
         <!-- Submit button  -->
@@ -28,3 +28,25 @@
     <!-- <router-link to="/">Home</router-link> -->
   </div>
 </template>
+
+
+<script>
+  export default {
+  name: 'Login',
+
+
+data: () => ({
+      valid: true,
+       form: {
+        username: ''.toLowerCase(),
+        password: '',
+       },
+    
+    methods: {
+      submitForm () {
+        this.form.username =  this.form.username.toLowerCase()
+       
+      },
+    }
+  }
+</script>
