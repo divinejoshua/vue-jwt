@@ -1,7 +1,7 @@
 <template>
   <div class="login-page">
 
-    <form @submit.prevent="" novalidate class="form-box">
+    <form @submit.prevent="submitForm" novalidate class="form-box">
 
       <div>
 
@@ -9,12 +9,12 @@
 
         <!-- Email  -->
         <div>
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" class="form-control" placeholder="Email" v-model="form.username">
         </div>
 
         <!-- Password  -->
         <div><br>
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" v-model="form.password" autocomplete="">
         </div>
 
         <!-- Submit button  -->
