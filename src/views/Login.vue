@@ -5,7 +5,7 @@
 
       <div>
 
-        <div class="message">This is for any message</div><br>
+        <div class="form-message">This is for any message</div><br>
 
         <!-- Email  -->
         <div>
