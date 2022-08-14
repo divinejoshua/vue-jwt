@@ -1,13 +1,24 @@
 <template>
   <div class="login-page">
-    <h1>This is the login page</h1>
 
-    <form @submit.prevent="" novalidate>
+    <form @submit.prevent="" novalidate class="form-box">
 
       <div>
-        <input type="email" class="form-control" placeholder="Email">
-        <input type="password" class="form-control" placeholder="Password">
-        <button type="submit" class="form-control-btn">Login</button>
+
+        <!-- Email  -->
+        <div>
+          <input type="email" class="form-control" placeholder="Email">
+        </div>
+
+        <!-- Password  -->
+        <div><br>
+          <input type="password" class="form-control" placeholder="Password">
+        </div>
+
+        <!-- Submit button  -->
+        <div>
+          <button type="submit" class="form-control-btn">Login</button>
+        </div>
       </div>
 
     </form>
