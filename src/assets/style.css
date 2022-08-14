@@ -35,12 +35,16 @@
     cursor: pointer;
     padding-top:4px;
     padding-bottom:5px ;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 5px;
 }
 
 .logout:hover{
     color: #E91E63;
     background-color: #FCE4EC;
-    transition: 20ms;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .body{
