@@ -38,7 +38,7 @@
 data: () => ({
       valid: true,
        form: {
-        username: ''.toLowerCase(),
+        username: '',
         password: '',
        },
     }),
@@ -46,7 +46,7 @@ data: () => ({
     methods: {
       submitForm () {
         this.form.username =  this.form.username.toLowerCase()
-       
+        console.log(this.form)
       },
     }
   }
