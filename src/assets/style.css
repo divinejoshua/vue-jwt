@@ -9,3 +9,11 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.brand{
+    float: left;
+}
+
+.logout{
+    float: right;
+}
