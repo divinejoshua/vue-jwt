@@ -4,6 +4,7 @@
     line-height:1.5;
     padding-left: 20px;
     padding-right: 20px;
+    color: #2c3e50;
 }
 
 .page{
@@ -20,7 +21,8 @@
 
 
 .vue{
-    color: #2c3e50;
+    color: #3eb7c0;
+    font-weight: bold;
 }
 .brand{
     float: left;
