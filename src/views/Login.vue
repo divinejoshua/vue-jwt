@@ -50,9 +50,15 @@ data: () => ({
       async submitForm () {
         this.form.username =  this.form.username.toLowerCase()
 
-        let response = await axios.post("auth/login/", this.form)
-        console.log(response.data)
-        // console.log(this.form)
+        try{
+          let response = await axios.post("auth/login/", this.form)
+          console.log(response.data)
+        }
+        catch (e){
+          console.log(e)
+        }
+
+       
       },
     }
   }
