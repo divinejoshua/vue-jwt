@@ -1,12 +1,12 @@
-// import store from '@/store'
 import { store } from '@/store'
-
-// import axios from 'axios'
+import axios from 'axios'
 
 store.subscribe((mutation) => {
-    if(mutation.type=="")
-    console.log("Yooo")
-    console.log(mutation.type)
+    if(mutation.type=="SET_ACCESS_TOKEN" && mutation.payload){
+
+        // Set axios authorisation headers 
+        axios.defaults.headers.common['Authorization'] = `Bearer ${mutation.payload}`
+    }
     console.log(mutation.payload)
 })
   

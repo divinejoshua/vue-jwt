@@ -21,7 +21,7 @@ export const store = createStore({
 
     // Set user token
     async COMMIT_ACCESS_TOKEN ({ commit }, access_token) {
-        commit('setToken', access_token)
+        commit('SET_ACCESS_TOKEN', access_token)
       },
 
   },
