@@ -29,7 +29,7 @@ export default {
       // Axios interceptors
       axios.interceptors.response.use(null, (error) => {
             if (error.config && error.response && error.response.status === 401 && store.state.access_token) {
-              return store.dispatch('refreshAccessToken').then(() => {
+              return store.dispatch('getAccessToken').then(() => {
                 error.config.headers.Authorization = `Bearer ${store.state.access_token}`
                 return axios.request(error.config);
               });
