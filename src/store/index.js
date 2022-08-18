@@ -9,7 +9,7 @@ export const store = createStore({
 
   // Mutations
   mutations: {
-    setToken (state, access_token) {
+    SET_ACCESS_TOKEN (state, access_token) {
       state.access_token = access_token
   },
 
@@ -20,7 +20,7 @@ export const store = createStore({
   actions: {
 
     // Set user token
-    async SET_ACCESS_TOKEN ({ commit }, access_token) {
+    async COMMIT_ACCESS_TOKEN ({ commit }, access_token) {
         commit('setToken', access_token)
       },
 
