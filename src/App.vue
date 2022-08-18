@@ -14,3 +14,25 @@
 }
 
 </style>
+
+
+<script>
+import { store } from '@/store'
+
+
+export default {
+  created: function () {
+    
+      //  Refresh for access token every 2 minutes
+     setInterval(function() {
+      if(store.state.access_token){
+          store.dispatch('refreshAccessToken') 
+      }
+    },
+   2 * 60 * 100);
+
+
+
+  }
+}
+</script>
