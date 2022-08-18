@@ -9,8 +9,8 @@
 
     <!-- Body  -->
     <div class="body">
-      <div class="username">divine</div>
-      <div class="email">divine@gmail.com</div>
+      <div class="username">{{user.username}}</div>
+      <div class="email">{{user.email}}</div>
     </div>
 
     
@@ -19,6 +19,7 @@
 
 <script>
 // @ is an alias to /src
+import axios from 'axios'
 
 export default {
   name: 'Home',
@@ -32,9 +33,13 @@ export default {
   methods:{
     // Get user details 
     async getUser(){
-      let response = await axios.get("accounts/user")
-      this.user = response.data
-
+      try{
+        let response = await axios.get("accounts/user")
+        this.user = response.data
+      }
+      catch (e){
+        console.log(e)
+      }      
     }
 
   },
