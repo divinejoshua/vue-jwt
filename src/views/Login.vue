@@ -47,6 +47,8 @@ data: () => ({
     }),
     
     methods: {
+      
+      // Login function 
       async submitForm () {
         this.form.username =  this.form.username.toLowerCase()
 
