@@ -51,6 +51,7 @@ data: () => ({
 
       // Login function 
       async submitForm () {
+        this.message = ""
         this.form.username =  this.form.username.toLowerCase()
 
         try{
@@ -59,7 +60,7 @@ data: () => ({
         }
         catch (e){
           // console.log(e)
-          this.message("An error occurred")
+          this.message = "An error occurred"
         }
 
        
