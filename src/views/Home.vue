@@ -5,6 +5,7 @@
     <div class="header">
       <div><span class="vue brand">Vue JWT</span> </div>
       <div class="logout" @click="logoutUser()">Logout</div>
+      <div class="logout" @click="getUser()">Get user details</div>
     </div>
 
     <!-- Body  -->
@@ -33,6 +34,7 @@ export default {
   methods:{
     // Get user details 
     async getUser(){
+      this.user = []
       try{
         let response = await axios.get("accounts/user")
         this.user = response.data
@@ -52,10 +54,10 @@ export default {
 
   mounted(){
 
-     setInterval(()=> {
+    //  setInterval(()=> {
           this.getUser()
-    },
-   2 * 60 * 100);
+    // },
+  //  2 * 60 * 100);
 
    
   }
