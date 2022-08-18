@@ -29,7 +29,7 @@
     font-size: 30px;
 }
 
-.logout{
+.logout, .getdetails{
     margin-top: 10px;
     float: right;
     cursor: pointer;
@@ -40,9 +40,18 @@
     border-radius: 5px;
 }
 
+
+
 .logout:hover{
     color: #E91E63;
     background-color: #FCE4EC;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.getdetails:hover {
+    color: green;
+    background-color: #E8F5E9;
     -webkit-transition: 0.3s;
     transition: 0.3s;
 }
