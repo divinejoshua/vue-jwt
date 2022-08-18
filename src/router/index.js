@@ -1,11 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import { store } from '@/store'
+
+// Check if user is logged in  
+const isLoggedIn = (to, from, next) => {
+  if (store.state.access_token) {
+      next()
+    return
+  }
+  next({name: 'Login'});
+}
+
+
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    beforeEnter: isLoggedIn,
+
   },
   {
     path: '/login',
