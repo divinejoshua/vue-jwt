@@ -5,7 +5,7 @@
     <div class="header">
       <div><span class="vue brand">Vue JWT</span> </div>
       <div class="logout" @click="logoutUser()">Logout</div>
-      <div class="logout" @click="getUser()">Get user details</div>
+      <div class="getdetails" @click="getUser()">Get user details</div>
     </div>
 
     <!-- Body  -->
