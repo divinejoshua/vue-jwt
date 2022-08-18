@@ -47,10 +47,10 @@ data: () => ({
     }),
     
     methods: {
-      submitForm () {
+      async submitForm () {
         this.form.username =  this.form.username.toLowerCase()
 
-        let response = axios.post("auth/login/", this.form)
+        let response = await axios.post("auth/login/", this.form)
         console.log(response.data)
         // console.log(this.form)
       },
