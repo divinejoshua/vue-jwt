@@ -59,10 +59,10 @@ data: () => ({
           let response = await axios.post("accounts/auth/login/", this.form)
 
           // Set access token 
-          this.$store.dispatch('SET_ACCESS_TOKEN', response.data.access_token)
+          this.$store.dispatch('COMMIT_ACCESS_TOKEN', response.data.access_token)
 
           // Redirect to home page 
-          this.$router.replace({ path : '/' })
+          // this.$router.replace({ path : '/' })
         }
         catch{
           this.message = "An error occurred"
