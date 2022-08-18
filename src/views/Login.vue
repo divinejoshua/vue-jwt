@@ -55,8 +55,14 @@ data: () => ({
         this.form.username =  this.form.username.toLowerCase()
 
         try{
+          // Login request 
           let response = await axios.post("accounts/auth/login/", this.form)
+
+          // Set access token 
           this.$store.dispatch('SET_ACCESS_TOKEN', response.data.access_token)
+
+          // Redirect to home page 
+          this.$router.replace({ path : '/' })
         }
         catch{
           this.message = "An error occurred"

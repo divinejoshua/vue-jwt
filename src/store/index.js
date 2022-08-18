@@ -9,7 +9,7 @@ export const store = createStore({
 
   // Mutations
   mutations: {
-    setUserDetials (state, access_token) {
+    setToken (state, access_token) {
       state.access_token = access_token
   },
 
@@ -21,8 +21,7 @@ export const store = createStore({
 
     // Set user token
     async SET_ACCESS_TOKEN ({ commit }, access_token) {
-        commit('setUserDetials', access_token)
-        console.log("yoo")
+        commit('setToken', access_token)
       },
 
   },
