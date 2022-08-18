@@ -34,8 +34,9 @@ export const store = createStore({
           commit('SET_ACCESS_TOKEN', response.data.access)
 
       } catch(e){
+        console.log("Hit bads")
+        if(e.response.status===401)
           commit('SET_ACCESS_TOKEN', null)
-
       }
     },
 
