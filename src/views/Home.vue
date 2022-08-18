@@ -22,5 +22,26 @@
 
 export default {
   name: 'Home',
+  
+  data(){
+    return {
+      user : []
+    }
+  },
+
+  methods:{
+    // Get user details 
+    async getUser(){
+      let response = await axios.get("accounts/user")
+      this.user = response.data
+
+    }
+
+  },
+
+
+  mounted(){
+    this.getUser()
+  }
 }
 </script>
