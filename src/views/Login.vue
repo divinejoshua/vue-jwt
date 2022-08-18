@@ -5,7 +5,7 @@
 
       <div>
 
-        <div class="form-message">This is for any message</div><br>
+        <div class="form-message" v-if="message">{{message}}</div><br>
 
         <!-- Email  -->
         <div>
@@ -44,20 +44,22 @@ data: () => ({
         username: '',
         password: '',
        },
+       message : '',
     }),
     
     methods: {
-      
+
       // Login function 
       async submitForm () {
         this.form.username =  this.form.username.toLowerCase()
 
         try{
-          let response = await axios.post("auth/login/", this.form)
+          let response = await axios.post("accounts/auth/login/", this.form)
           console.log(response.data)
         }
         catch (e){
-          console.log(e)
+          // console.log(e)
+          this.message("An error occurred")
         }
 
        
