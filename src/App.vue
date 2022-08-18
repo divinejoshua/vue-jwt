@@ -51,7 +51,7 @@ export default {
                 if (error.config && error.response && error.response.status === 401) {
                   return store.dispatch('refreshAccessToken').then(() => {
                     error.config.headers.Authorization = store.state.access_token
-                    return axios.request(error.config);
+                    axios.request(error.config);
                   });
                 }
 
