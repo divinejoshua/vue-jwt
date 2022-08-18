@@ -47,7 +47,6 @@ export const store = createStore({
         try{
             let response = await axios.post('accounts/auth/token/refresh/', {'refresh': localStorage.getItem('refresh')})
             commit('SET_ACCESS_TOKEN', response.data.access)
-  
         } catch(e){
             // commit('SET_ACCESS_TOKEN', null)
   
