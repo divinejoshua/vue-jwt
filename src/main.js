@@ -4,6 +4,8 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 
+// Require subscriber 
+require('@/store/subscriber')
 
 
 // Add axios defaults 
