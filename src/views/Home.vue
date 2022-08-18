@@ -4,7 +4,7 @@
     <!-- Header  -->
     <div class="header">
       <div><span class="vue brand">Vue JWT</span> </div>
-      <div class="logout">Logout</div>
+      <div class="logout" @click="logoutFromLocalStorage">Logout</div>
     </div>
 
     <!-- Body  -->
@@ -40,6 +40,11 @@ export default {
       catch (e){
         console.log(e)
       }      
+    },
+
+    logoutUser(){
+          localStorage.setItem("refresh", null);
+          this.$router.replace({ path : '/login' })
     }
 
   },

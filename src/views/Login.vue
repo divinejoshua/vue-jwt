@@ -61,7 +61,7 @@ data: () => ({
           localStorage.setItem("refresh", response.data.refresh_token);
 
           // Set access token 
-          this.$store.dispatch('COMMIT_ACCESS_TOKEN', response.data.access_token)
+          this.$store.dispatch('commitAccessToken', response.data.access_token)
 
           // Redirect to home page 
           this.$router.replace({ path : '/' })
