@@ -23,13 +23,13 @@ import { store } from '@/store'
 export default {
   created: function () {
     
-      //  Refresh for access token every 2 minutes
+      //  Refresh for access token every 1 minute
      setInterval(function() {
       if(store.state.access_token){
           store.dispatch('refreshAccessToken') 
       }
     },
-   2 * 60 * 100);
+   2 * 60 * 1000);
 
 
 

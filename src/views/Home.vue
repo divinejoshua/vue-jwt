@@ -51,7 +51,13 @@ export default {
 
 
   mounted(){
-    this.getUser()
+
+     setInterval(()=> {
+          this.getUser()
+    },
+   2 * 60 * 100);
+
+   
   }
 }
 </script>
