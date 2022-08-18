@@ -41,20 +41,6 @@ export const store = createStore({
 
 
 
-      // Get and commit a new access token by time interval
-      async refreshAccessToken({ commit }){
-
-        try{
-            let response = await axios.post('accounts/auth/token/refresh/', {'refresh': localStorage.getItem('refresh')})
-            commit('SET_ACCESS_TOKEN', response.data.access)
-        } catch(e){
-            // commit('SET_ACCESS_TOKEN', null)
-  
-        }
-      },
-    
-
-
   },
 
 
