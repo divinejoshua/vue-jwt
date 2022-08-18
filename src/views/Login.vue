@@ -56,7 +56,8 @@ data: () => ({
 
         try{
           let response = await axios.post("accounts/auth/login/", this.form)
-          console.log(response.data)
+          this.$store.dispatch('SET_ACCESS_TOKEN')
+          // console.log(response.data)
         }
         catch (e){
           // console.log(e)

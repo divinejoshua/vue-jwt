@@ -22,8 +22,9 @@ export default new Vuex.Store({
   actions: {
 
     // Set user token
-    async loadUserDetails ({ commit }, access_token) {
+    async SET_ACCESS_TOKEN ({ commit }, access_token) {
         commit('setUserDetials', access_token)
+        console.log(access_token)
       },
 
   },
