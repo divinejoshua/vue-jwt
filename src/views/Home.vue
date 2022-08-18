@@ -4,7 +4,7 @@
     <!-- Header  -->
     <div class="header">
       <div><span class="vue brand">Vue JWT</span> </div>
-      <div class="logout" @click="logoutFromLocalStorage">Logout</div>
+      <div class="logout" @click="logoutUser()">Logout</div>
     </div>
 
     <!-- Body  -->
