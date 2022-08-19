@@ -44,9 +44,19 @@ export default {
       }      
     },
 
-    logoutUser(){
+    async logoutUser(){
           localStorage.setItem("refresh", null);
           this.$router.replace({ path : '/login' })
+
+            // Logout request 
+          // try{
+          //   await axios.post("accounts/auth/logout/")
+          //   this.$store.commit('SET_ACCESS_TOKEN', null); 
+          //   this.$router.replace({ path : '/login' })
+          // }
+          // catch {
+          //   console.log("error")
+          // }
     }
 
   },
