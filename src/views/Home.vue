@@ -40,7 +40,7 @@ export default {
         this.user = response.data
       }
       catch (e){
-        console.log(e)
+        console.log("error")
       }      
     },
 
