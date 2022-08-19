@@ -5,7 +5,7 @@
 
       <div>
 
-        <div class="form-message" v-if="message">{{message}}</div><br>
+        <div class="form-message" v-if="message">{{message}}</div><br>  
 
         <!-- Email  -->
         <div>
