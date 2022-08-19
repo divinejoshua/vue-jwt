@@ -37,7 +37,7 @@ export default {
 
           // if the access token is expired
             if (error.config && error.response && error.response.status === 401) {
-              
+
               return store.dispatch('getAccessToken').then(() => {
                 error.config.headers.Authorization = `Bearer ${store.state.access_token}`
 
@@ -45,7 +45,6 @@ export default {
                 return axios.request(error.config);
               });
             }
-
             return Promise.reject(error);
     });
     
