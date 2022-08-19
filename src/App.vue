@@ -27,7 +27,7 @@ export default {
 
 
       // Axios interceptors
-      axios.interceptors.response.use(null, (error) => {
+      axios.interceptors.response.use(null, (error) => { 
 
       // if the access token is expired
         if (error.config && error.response && error.response.status === 401) {
