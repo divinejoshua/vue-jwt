@@ -32,7 +32,7 @@ export default {
         // if the url is for the refresh token
         if (error.config.url == "accounts/auth/token/refresh/") { 
           store.commit('SET_ACCESS_TOKEN', null); 
-          localStorage.setItem('refresh', null)
+          // localStorage.setItem('refresh', null)
         }
 
           // if There is no access token 
