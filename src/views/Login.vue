@@ -59,7 +59,7 @@ data: () => ({
           let response = await axios.post("accounts/auth/login/", this.form)
 
           //Store refresh
-          // localStorage.setItem("refresh", response.data.refresh_token);
+          localStorage.setItem("refresh", response.data.refresh_token);
 
           // Set access token 
           this.$store.dispatch('commitAccessToken', response.data.access_token)
