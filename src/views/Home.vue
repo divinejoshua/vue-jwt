@@ -36,7 +36,7 @@ export default {
     async getUser(){
       this.user = []
       try{
-        let response = await axios.get("accounts/user")
+        let response = await axios.get("accounts/user") 
         this.user = response.data
       }
       catch (e){
