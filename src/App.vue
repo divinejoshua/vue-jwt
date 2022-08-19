@@ -28,10 +28,15 @@ export default {
 
       // Axios interceptors
       axios.interceptors.response.use(null, (error) => {
-        if (!store.state.access_token){return}
+
+        // if the url is for the refresh token
+        if (error.config.url == "accounts/auth/token/refresh/") { return }
+
+          // if There is no access token 
+          if (!store.state.access_token){ this.$router.replace({ path : '/login' })}
+
+          // if the access token is expired
             if (error.config && error.response && error.response.status === 401) {
-              console.log(error.config.url)
-              // if (!store.state.access_token){ this.$router.replace({ path : '/login' })}
               return store.dispatch('getAccessToken').then(() => {
                 error.config.headers.Authorization = `Bearer ${store.state.access_token}`
                 return axios.request(error.config);

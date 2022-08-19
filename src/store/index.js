@@ -35,7 +35,7 @@ export const store = createStore({
 
       } catch(e){
         if(e.response.status===401)
-          console.log("Hit bads")
+          console.clear();
           commit('SET_ACCESS_TOKEN', null)
       }
     },
