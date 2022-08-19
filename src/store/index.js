@@ -30,13 +30,14 @@ export const store = createStore({
     async getAccessToken({ commit }){
  
       try{
-          let response = await axios.post('accounts/auth/token/refresh/', {'refresh': localStorage.getItem('refresh')})
+          // let response = await axios.post('accounts/auth/token/refresh/', {'refresh': localStorage.getItem('refresh')})
+          let response = await axios.post('accounts/auth/token/refresh/')
           commit('SET_ACCESS_TOKEN', response.data.access)
 
       } catch(e){
-        if(e.response.status===401)
-          console.clear();
+        if(e.response.status===401){
           commit('SET_ACCESS_TOKEN', null)
+        }
       }
     },
 

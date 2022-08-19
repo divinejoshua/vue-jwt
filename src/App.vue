@@ -30,7 +30,10 @@ export default {
       axios.interceptors.response.use(null, (error) => {
 
         // if the url is for the refresh token
-        if (error.config.url == "accounts/auth/token/refresh/") { store.commit('SET_ACCESS_TOKEN', null) }
+        if (error.config.url == "accounts/auth/token/refresh/") { 
+          store.commit('SET_ACCESS_TOKEN', null); 
+          localStorage.setItem('refresh', null)
+        }
 
           // if There is no access token 
           if (!store.state.access_token){ return this.$router.replace({ path : '/login' })}
