@@ -35,10 +35,7 @@ export const store = createStore({
           commit('SET_ACCESS_TOKEN', response.data.access)
 
       } catch(e){
-        if(e.response.status===401){
-          commit('SET_ACCESS_TOKEN', null)
-          localStorage.setItem('refresh', null)
-        }
+        //
       }
     },
 
