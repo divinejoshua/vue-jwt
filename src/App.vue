@@ -32,7 +32,7 @@ export default {
       // if the access token is expired
         if (error.config && error.response && error.response.status === 401) {
 
-          // if the url is froms the refresh token
+          // if the url is from the refresh token
           if (error.config.url == "accounts/auth/token/refresh/") { 
             store.commit('SET_ACCESS_TOKEN', null); 
             localStorage.setItem('refresh', null)
